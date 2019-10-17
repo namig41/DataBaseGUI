@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Connection.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(401, 233)
+        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
+        self.buttonBox.setGeometry(QtCore.QRect(40, 190, 341, 32))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.horizontalLayoutWidget = QtWidgets.QWidget(Dialog)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(20, 10, 251, 31))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.label.setObjectName("label")
+        self.horizontalLayout.addWidget(self.label)
+        spacerItem = QtWidgets.QSpacerItem(15, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.lineEdit = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+        self.lineEdit.setPlaceholderText("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(Dialog)
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(20, 50, 251, 41))
+        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_2 = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_2.addWidget(self.label_2)
+        spacerItem1 = QtWidgets.QSpacerItem(15, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem1)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_2)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_2.addWidget(self.lineEdit_2)
+        self.horizontalLayoutWidget_3 = QtWidgets.QWidget(Dialog)
+        self.horizontalLayoutWidget_3.setGeometry(QtCore.QRect(20, 90, 251, 41))
+        self.horizontalLayoutWidget_3.setObjectName("horizontalLayoutWidget_3")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_3)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_3 = QtWidgets.QLabel(self.horizontalLayoutWidget_3)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_3.addWidget(self.label_3)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem2)
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_3)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.horizontalLayout_3.addWidget(self.lineEdit_3)
+        self.horizontalLayoutWidget_4 = QtWidgets.QWidget(Dialog)
+        self.horizontalLayoutWidget_4.setGeometry(QtCore.QRect(20, 130, 251, 41))
+        self.horizontalLayoutWidget_4.setObjectName("horizontalLayoutWidget_4")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_4)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label_4 = QtWidgets.QLabel(self.horizontalLayoutWidget_4)
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_4.addWidget(self.label_4)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem3)
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.horizontalLayoutWidget_4)
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.horizontalLayout_4.addWidget(self.lineEdit_4)
+
+        self.retranslateUi(Dialog)
+        self.buttonBox.accepted.connect(Dialog.accept)
+        self.buttonBox.rejected.connect(Dialog.reject)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Подключение к базе данных"))
+        self.label.setText(_translate("Dialog", "Имя пользователя"))
+        self.lineEdit.setText(_translate("Dialog", "dataBaseGUI"))
+        self.label_2.setText(_translate("Dialog", "Имя сервера"))
+        self.lineEdit_2.setText(_translate("Dialog", "postgres"))
+        self.label_3.setText(_translate("Dialog", "Пароль"))
+        self.lineEdit_3.setText(_translate("Dialog", "1207"))
+        self.label_4.setText(_translate("Dialog", "IP хоста"))
+        self.lineEdit_4.setText(_translate("Dialog", "localhost"))

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>631</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Работа с базой данных</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>611</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Поиск</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Найти</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>631</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>База данных</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Добавить</string>
+     </property>
+     <addaction name="action_7"/>
+     <addaction name="action_10"/>
+    </widget>
+    <addaction name="action_9"/>
+    <addaction name="action_5"/>
+    <addaction name="menu_3"/>
+    <addaction name="action_8"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Загрузить</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Атрибут</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>Подключиться</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>Кортеж</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
