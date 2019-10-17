@@ -86,10 +86,10 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Подключение к базе данных"))
         self.label.setText(_translate("Dialog", "Имя пользователя"))
-        self.lineEdit.setText(_translate("Dialog", "dataBaseGUI"))
+        self.lineEdit.setText(_translate("Dialog", "database1"))
         self.label_2.setText(_translate("Dialog", "Имя сервера"))
         self.lineEdit_2.setText(_translate("Dialog", "postgres"))
         self.label_3.setText(_translate("Dialog", "Пароль"))
-        self.lineEdit_3.setText(_translate("Dialog", "1207"))
+        self.lineEdit_3.setText(_translate("Dialog", "1234"))
         self.label_4.setText(_translate("Dialog", "IP хоста"))
         self.lineEdit_4.setText(_translate("Dialog", "localhost"))
