@@ -17,7 +17,7 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.table_list_dict = {}
+        self.table_dict = {}
         self.table_list = []
         self.table_name = "" 
 
@@ -112,7 +112,6 @@ class DB_GUI(QtWidgets.QMainWindow):
 	""")
 
         self.table_name = "A" 
-        
 
     def insert_db(self):
         text, ok = QInputDialog.getText(self, "Вставка","Введите строку: ")
@@ -135,7 +134,9 @@ class DB_GUI(QtWidgets.QMainWindow):
                 reader = csv.DictReader(f, delimiter=';')
                 for row in reader:
                     for column, value in iter(row.items()):
-                        self.table_list_dict.setdefault(column, []).append(value)
+                        self.table_dict.setdefault(column, []).append(value)
+                for key in self.table_dict.keys():
+                    self.table_list.append(self.table_dict[key])
         except IOError:
             print("I/O error")
 
@@ -145,13 +146,18 @@ class DB_GUI(QtWidgets.QMainWindow):
     
     def save_as(self):
         fname = QFileDialog.getSaveFileName(self, 'Сохранить как...', '/home')[0]
-        print(self.table_list_dict.values())
+        print(self.table_dict.values())
         try:
             with open(fname, "w", newline='') as f:
-                writer = csv.DictWriter(f, delimiter=';', fieldnames=list(self.table_list_dict))
+                writer = csv.DictWriter(f, delimiter=';', fieldnames=list(self.table_dict))
                 writer.writeheader()
-                for keys, data in self.table_list_dict.items():
-                    print(keys, data)
+
+                for i in range(len(self.table_list[0])): 
+                    l = []
+                    for j in range(len(self.table_list)):
+                        l.append(self.table_list[j][i])
+                    writer.writerow(dict(zip(list(self.table_dict.keys()), l)))
+
         except IOError:
             print("I/O error")
 
