@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'DataBaseGUI.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -13,7 +13,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(631, 321)
+        MainWindow.setFixedSize(631, 321)
+        MainWindow.setWindowTitle("DataBase")
+        MainWindow.setWindowIcon(QtGui.QIcon("database.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
@@ -38,7 +40,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.pushButton)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 631, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 631, 22))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -76,6 +78,8 @@ class Ui_MainWindow(object):
         self.action_12.setObjectName("action_12")
         self.action_13 = QtWidgets.QAction(MainWindow)
         self.action_13.setObjectName("action_13")
+        self.action_8 = QtWidgets.QAction(MainWindow)
+        self.action_8.setObjectName("action_8")
         self.menu.addAction(self.action)
         self.menu.addAction(self.action_2)
         self.menu.addAction(self.action_3)
@@ -87,6 +91,7 @@ class Ui_MainWindow(object):
         self.menu_4.addAction(self.action_12)
         self.menu_2.addAction(self.action_9)
         self.menu_2.addAction(self.action_13)
+        self.menu_2.addAction(self.action_8)
         self.menu_2.addAction(self.action_5)
         self.menu_2.addAction(self.menu_3.menuAction())
         self.menu_2.addAction(self.menu_4.menuAction())
@@ -117,3 +122,4 @@ class Ui_MainWindow(object):
         self.action_11.setText(_translate("MainWindow", "Кортеж"))
         self.action_12.setText(_translate("MainWindow", "Атрибут"))
         self.action_13.setText(_translate("MainWindow", "Список таблиц"))
+        self.action_8.setText(_translate("MainWindow", "Скопировать"))

@@ -1,9 +1,11 @@
+#! /usr/bin/python3.6
+# -*- coding: utf-8 -*-
 import psycopg2
 from psycopg2 import sql
 import sys
 import csv
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QInputDialog, QTableWidgetItem
+from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QInputDialog, QTableWidgetItem, QMessageBox
 from DataBaseGUI import Ui_MainWindow
 import Connection
 import Create
@@ -30,18 +32,19 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.sql_command["delete"]    = "DELETE FROM {} WHERE {};"
         self.sql_command["drop"]      = "DROP TABLE IF EXISTS {};" 
         self.sql_command["sample"]    = "SELECT {} FROM {} WHERE {};"
+        self.sql_command["copy"]      = "COPY {} FROM {!r} DELIMITER ';' ENCODING 'WIN1251' CSV HEADER";
 
         self.ui.action.triggered.connect(self.read_file)
         self.ui.action_3.triggered.connect(self.save_as)
         self.ui.action_4.triggered.connect(self.close_app)
         self.ui.action_5.triggered.connect(self.showDlgCreateDB)
         self.ui.action_7.triggered.connect(self.insert_attribute_db)
+        self.ui.action_8.triggered.connect(self.insertf_db)
         self.ui.action_10.triggered.connect(self.insert_cortege_db)
         self.ui.action_11.triggered.connect(self.delete_cortege_db)
         self.ui.action_6.triggered.connect(self.delete_db)
         self.ui.action_9.triggered.connect(self.showDlgConnectionDB)
         self.ui.action_13.triggered.connect(self.showTableList) 
-
         self.ui.pushButton.clicked.connect(self.search_db)
 
 
@@ -122,9 +125,11 @@ class DB_GUI(QtWidgets.QMainWindow):
         for row in range(self.dlg_ui.tableWidget.rowCount()):
             combo = QtWidgets.QComboBox(self.dlg)
             combo.addItem("INT")
+            combo.addItem("DOUBLE")
             combo.addItem("TEXT")
+            combo.addItem("TIME")
+            combo.addItem("DATE")
             self.dlg_ui.tableWidget.setCellWidget(row, 1, combo)
-
         self.dlg.show()
 
     def create_db(self):
@@ -153,7 +158,6 @@ class DB_GUI(QtWidgets.QMainWindow):
         if ok and text:
             insert = sql.SQL(self.sql_command["cortege"].format(self.table_name, text))
             self.cursor.execute(insert)	
-
             self.get_table()
 
     def delete_cortege_db(self):
@@ -162,6 +166,11 @@ class DB_GUI(QtWidgets.QMainWindow):
             delete = sql.SQL(self.sql_command["delete"].format(self.table_name, text))
             self.cursor.execute(delete)
             self.get_table()
+
+    def insertf_db(self):
+        insert = sql.SQL(self.sql_command["copy"].format(self.table_name, self.fname))
+        self.cursor.execute(insert)
+        self.update_table()
 
     def delete_db(self):
         table_name, ok = QInputDialog.getText(self, "Удаление","Название таблиц: ")
@@ -173,7 +182,6 @@ class DB_GUI(QtWidgets.QMainWindow):
                                     NOT IN ('information_schema','pg_catalog');")
         table_names = []
         ok = False 
-
         for i in self.cursor:
             for j in i:
                 table_names.append(j)
@@ -185,15 +193,17 @@ class DB_GUI(QtWidgets.QMainWindow):
             self.get_table()
 
     def read_file(self):
-        fname = QFileDialog.getOpenFileName(self, 'Открыть файл', '/home')[0]
+        self.fname = QFileDialog.getOpenFileName(self, 'Открыть файл', '/home')[0]
         try:
-            with open(fname, "r", newline='') as f:
+            with open(self.fname, "r", newline='') as f:
                 reader = csv.DictReader(f, delimiter=';')
                 for row in reader:
                     for column, value in iter(row.items()):
                         self.table_dict.setdefault(column, []).append(value)
-                for key in self.table_dict.keys():
+                self.table_header = self.table_dict.keys()
+                for key in self.table_header:
                     self.table_list.append(self.table_dict[key])
+                QMessageBox.information(self, "Состояние", "Успешно")
         except IOError:
             print("I/O error")
 
@@ -202,9 +212,9 @@ class DB_GUI(QtWidgets.QMainWindow):
         pass
     
     def save_as(self):
-        fname = QFileDialog.getSaveFileName(self, 'Сохранить как...', '/home')[0]
+        self.fname = QFileDialog.getSaveFileName(self, 'Сохранить как...', '/home')[0]
         try:
-            with open(fname, "w", newline='') as f:
+            with open(self.fname, "w", newline='') as f:
                 writer = csv.DictWriter(f, delimiter=';', fieldnames=list(self.table_dict))
                 writer.writeheader()
 
