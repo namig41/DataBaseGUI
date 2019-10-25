@@ -1,9 +1,11 @@
 #! /usr/bin/python3.6
 # -*- coding: utf-8 -*-
+
 import psycopg2
 from psycopg2 import sql
 import sys
 import csv
+import random
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QInputDialog, QTableWidgetItem, QMessageBox
 from DataBaseGUI import Ui_MainWindow
@@ -20,15 +22,14 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         self.sql_command  = {}
-        self.table_dict   = {}
-        self.table_list   = []
+        self.table        = []
         self.table_header = []
         self.table_name   = "" 
+        self.flag = True
 
         self.sql_command["create"]    = "CREATE TABLE {} ({});"
         self.sql_command["select"]    = "SELECT {} FROM {};"
         self.sql_command["cortege"]   = "INSERT INTO {} VALUES ({});"
-        self.sql_command["attribute"] = "ALTER TABLE {} ADD COLUMN {} {}"
         self.sql_command["delete"]    = "DELETE FROM {} WHERE {};"
         self.sql_command["drop"]      = "DROP TABLE IF EXISTS {};" 
         self.sql_command["sample"]    = "SELECT {} FROM {} WHERE {};"
@@ -38,15 +39,12 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.ui.action_3.triggered.connect(self.save_as)
         self.ui.action_4.triggered.connect(self.close_app)
         self.ui.action_5.triggered.connect(self.showDlgCreateDB)
-        self.ui.action_7.triggered.connect(self.insert_attribute_db)
         self.ui.action_8.triggered.connect(self.insertf_db)
         self.ui.action_10.triggered.connect(self.insert_cortege_db)
         self.ui.action_11.triggered.connect(self.delete_cortege_db)
         self.ui.action_6.triggered.connect(self.delete_db)
         self.ui.action_9.triggered.connect(self.showDlgConnectionDB)
-        self.ui.action_13.triggered.connect(self.showTableList) 
         self.ui.pushButton.clicked.connect(self.search_db)
-
 
     def showDlgConnectionDB(self):
         self.dlg = QtWidgets.QDialog()
@@ -66,22 +64,31 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.conn.autocommit = True
         self.cursor = self.conn.cursor()
 
-        self.showTableList()
+        self.cursor.execute("select table_name from information_schema.tables where table_schema \
+                                    not in ('information_schema','pg_catalog');")
+        self.init_comboBox()
+
+    def update_table_name(self, name):
+        self.table_name = name
+        self.get_table()
 
     def attribute_list(self):
         self.cursor.execute(self.sql_command["sample"].format("COLUMN_NAME",
                                                               "information_schema.COLUMNS",
                                                               "TABLE_NAME = '{}'".format(self.table_name)))
+        self.table_header = []
         for i in self.cursor:
             self.table_header.append(i[0])
 
     def update_table(self):
-        self.ui.tableWidget.setRowCount(len(self.table_list))
-        self.ui.tableWidget.setColumnCount(len(self.table_list[0]))
+        self.ui.tableWidget.setRowCount(len(self.table))
+        self.ui.tableWidget.setColumnCount(len(self.table[0]))
+
+        self.attribute_list()
         self.ui.tableWidget.setHorizontalHeaderLabels(self.table_header)
 
         row = 0
-        for tup in self.table_list:
+        for tup in self.table:
             col = 0
             for item in tup:
                 cellinfo = QTableWidgetItem(str(item))
@@ -91,27 +98,42 @@ class DB_GUI(QtWidgets.QMainWindow):
             row += 1 
 
     def get_table(self):
-        self.cursor.execute(self.sql_command["select"].format('*', self.table_name))
+        if self.table_name:
+            self.cursor.execute(self.sql_command["select"].format('*', self.table_name))
 
-        self.table_list = []
-        for i in self.cursor:
-            self.table_list.append(i)
+            self.table = []
+            for i in self.cursor:
+                self.table.append(i)
 
-        self.attribute_list()
-        if self.table_list:
-            self.update_table()
+            self.attribute_list()
+            if self.table:
+                self.update_table()
 
     def search_db(self):
-        predicate = self.ui.lineEdit.text()
-        self.cursor.execute(self.sql_command["sample"].format('*', self.table_name, predicate))
+        search_text = self.ui.lineEdit.text()
+        if search_text:
+            if '=' in search_text or '>' in search_text or '<' in search_text: 
+                self.cursor.execute(self.sql_command["sample"].format('*', self.table_name, search_text))
+                
+                self.table = []
+                for i in self.cursor:
+                    self.table.append(i)
 
-        self.table_list = []
-        for i in self.cursor:
-            self.table_list.append(i)
-
-        self.attribute_list()
-        if self.table_list:
+                self.attribute_list()
+                if self.table:
+                    self.update_table()
+            else:
+                i = 0
+                for row in self.table:
+                    j = 0
+                    for item in row:
+                        if str(item) == search_text:
+                            self.ui.tableWidget.item(i, j).setBackground(QtCore.Qt.red)
+                        j += 1
+                    i += 1 
+        else:
             self.update_table()
+
         
     def showDlgCreateDB(self):
         self.dlg = QtWidgets.QDialog()
@@ -143,15 +165,8 @@ class DB_GUI(QtWidgets.QMainWindow):
 
         self.table_name = self.dlg_ui.lineEdit.text() 
         self.cursor.execute(self.sql_command["create"].format(self.table_name, data[:-1]))
-
-    def insert_attribute_db(self):
-        text, ok = QInputDialog.getText(self, "Вставка","Введите атрибут: ")
-        if ok and text:
-            insert = sql.SQL(self.sql_command["attribute"].format(self.table_name, text))
-            self.cursor.execute(insert)	
-
-            self.table_list.append(text.split(','))
-            self.update_table()
+        self.table_names.append(self.table_name)
+        self.update_comboBox()
 
     def insert_cortege_db(self):
         text, ok = QInputDialog.getText(self, "Вставка","Введите кортеж: ")
@@ -173,40 +188,42 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.update_table()
 
     def delete_db(self):
-        table_name, ok = QInputDialog.getText(self, "Удаление","Название таблиц: ")
-        if ok and table_name:
-            self.cursor.execute(self.sql_command["drop"].format(table_name))
+        if self.table_names:
+            self.table_name, ok = QInputDialog.getItem(self, "выберите таблицу",
+                                                        "название таблиц:", self.table_names, 0, False)
+        if ok and self.table_name:
+            self.cursor.execute(self.sql_command["drop"].format(self.table_name))
+            self.table_names.remove(self.table_name)
+            self.update_comboBox()
 
-    def showTableList(self):
-        self.cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema \
-                                    NOT IN ('information_schema','pg_catalog');")
-        table_names = []
-        ok = False 
-        for i in self.cursor:
-            for j in i:
-                table_names.append(j)
+    def init_comboBox(self):
+        self.table_names = []
+        for name in self.cursor:
+            self.table_names.append(name[0])
+            self.ui.comboBox.addItem(name[0])
+        self.table_name = self.table_names[0]
+        self.get_table()
 
-        if table_names:
-            self.table_name, ok = QInputDialog.getItem(self, "Выберите таблицу",
-                                                        "Название таблиц:", table_names, 0, False)
-        if ok:
-            self.get_table()
+    def update_comboBox(self):
+        self.ui.comboBox.clear()
+        for name in self.table_names:
+            self.ui.comboBox.addItem(name[0])
+
+        if self.flag:
+            self.ui.comboBox.currentTextChanged.connect(self.update_table_name)
+            self.flag = False
 
     def read_file(self):
         self.fname = QFileDialog.getOpenFileName(self, 'Открыть файл', '/home')[0]
         try:
-            with open(self.fname, "r", newline='') as f:
-                reader = csv.DictReader(f, delimiter=';')
-                for row in reader:
-                    for column, value in iter(row.items()):
-                        self.table_dict.setdefault(column, []).append(value)
-                self.table_header = self.table_dict.keys()
-                for key in self.table_header:
-                    self.table_list.append(self.table_dict[key])
-                QMessageBox.information(self, "Состояние", "Успешно")
+            with open(self.fname, "r", errors='ignore', encoding='utf-8', newline='') as f:
+                reader = csv.reader(f, delimiter=';')
+                self.table_header = next(reader, None)
+                self.table = []
+                for row in reader: 
+                    self.table.append(row)
         except IOError:
             print("I/O error")
-
 
     def save(self):
         pass
@@ -214,16 +231,11 @@ class DB_GUI(QtWidgets.QMainWindow):
     def save_as(self):
         self.fname = QFileDialog.getSaveFileName(self, 'Сохранить как...', '/home')[0]
         try:
-            with open(self.fname, "w", newline='') as f:
-                writer = csv.DictWriter(f, delimiter=';', fieldnames=list(self.table_dict))
-                writer.writeheader()
-
-                for i in range(len(self.table_list[0])): 
-                    l = []
-                    for j in range(len(self.table_list)):
-                        l.append(self.table_list[j][i])
-                    writer.writerow(dict(zip(list(self.table_dict.keys()), l)))
-
+            with open(self.fname, "w", errors='ignore', encoding='utf-8', newline='') as f:
+                writer = csv.writer(f, delimiter=';')
+                writer.writerow(self.table_header)
+                for row in self.table: 
+                    writer.writerow(row)
         except IOError:
             print("I/O error")
 

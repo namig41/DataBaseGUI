@@ -69,6 +69,16 @@ font-color:white;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>30</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -96,7 +106,7 @@ font-color:white;</string>
      <property name="title">
       <string>Добавить</string>
      </property>
-     <addaction name="action_7"/>
+     <addaction name="action_5"/>
      <addaction name="action_10"/>
     </widget>
     <widget class="QMenu" name="menu_4">
@@ -105,12 +115,9 @@ font-color:white;</string>
      </property>
      <addaction name="action_6"/>
      <addaction name="action_11"/>
-     <addaction name="action_12"/>
     </widget>
     <addaction name="action_9"/>
-    <addaction name="action_13"/>
     <addaction name="action_8"/>
-    <addaction name="action_5"/>
     <addaction name="menu_3"/>
     <addaction name="menu_4"/>
    </widget>
@@ -120,7 +127,7 @@ font-color:white;</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action">
    <property name="text">
-    <string>Загрузить</string>
+    <string>Открыть</string>
    </property>
   </action>
   <action name="action_2">
@@ -140,7 +147,7 @@ font-color:white;</string>
   </action>
   <action name="action_5">
    <property name="text">
-    <string>Создать</string>
+    <string>Таблицу</string>
    </property>
   </action>
   <action name="action_7">
