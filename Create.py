@@ -13,7 +13,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(278, 318)
+        Dialog.setFixedSize(278, 318)
+        Dialog.setWindowIcon(QtGui.QIcon("image\\insert_table.png"))
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(70, 270, 181, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)

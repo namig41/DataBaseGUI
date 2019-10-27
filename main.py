@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QInputDialog, QT
 from DataBaseGUI import Ui_MainWindow
 import Connection
 import Create
+import Cortege
 
 #https://python-scripts.com/pyqt5
 #https://khashtamov.com/ru/postgresql-python-psycopg2/
@@ -39,8 +40,8 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.ui.action_3.triggered.connect(self.save_as)
         self.ui.action_4.triggered.connect(self.close_app)
         self.ui.action_5.triggered.connect(self.showDlgCreateDB)
-        self.ui.action_8.triggered.connect(self.insertf_db)
-        self.ui.action_10.triggered.connect(self.insert_cortege_db)
+        self.ui.action_8.triggered.connect(self.insert_file_db)
+        self.ui.action_10.triggered.connect(self.showDlgCortegeAdd)
         self.ui.action_11.triggered.connect(self.delete_cortege_db)
         self.ui.action_6.triggered.connect(self.delete_db)
         self.ui.action_9.triggered.connect(self.showDlgConnectionDB)
@@ -57,16 +58,19 @@ class DB_GUI(QtWidgets.QMainWindow):
     
     def connect_db(self):
         self.dlg.close()
-        self.conn = psycopg2.connect(dbname=self.dlg_ui.lineEdit.text(),
-                                        user=self.dlg_ui.lineEdit_2.text(),
-                                        password=self.dlg_ui.lineEdit_3.text(),
-                                        host=self.dlg_ui.lineEdit_4.text())
-        self.conn.autocommit = True
-        self.cursor = self.conn.cursor()
+        try:
+            self.conn = psycopg2.connect(dbname=self.dlg_ui.lineEdit.text(),
+                                            user=self.dlg_ui.lineEdit_2.text(),
+                                            password=self.dlg_ui.lineEdit_3.text(),
+                                            host=self.dlg_ui.lineEdit_4.text())
+            self.conn.autocommit = True
+            self.cursor = self.conn.cursor()
 
-        self.cursor.execute("select table_name from information_schema.tables where table_schema \
-                                    not in ('information_schema','pg_catalog');")
-        self.init_comboBox()
+            self.cursor.execute("select table_name from information_schema.tables where table_schema \
+                                        not in ('information_schema','pg_catalog');")
+            self.init_comboBox()
+        except:
+            QMessageBox.critical(self, "Error", "Произошла ошибка входа")
 
     def update_table_name(self, name):
         self.table_name = name
@@ -156,52 +160,89 @@ class DB_GUI(QtWidgets.QMainWindow):
 
     def create_db(self):
         self.dlg.close()
-        data = "" 
+        try:
+            data = "" 
 
-        for i in range(self.dlg_ui.tableWidget.rowCount()):
-            if self.dlg_ui.tableWidget.item(i, 0):
-                data += "{} {},".format(self.dlg_ui.tableWidget.takeItem(i, 0).text(),
-                                        self.dlg_ui.tableWidget.cellWidget(i, 1).currentText())
+            for i in range(self.dlg_ui.tableWidget.rowCount()):
+                if self.dlg_ui.tableWidget.item(i, 0):
+                    data += "{} {},".format(self.dlg_ui.tableWidget.takeItem(i, 0).text(),
+                                            self.dlg_ui.tableWidget.cellWidget(i, 1).currentText())
 
-        self.table_name = self.dlg_ui.lineEdit.text() 
-        self.cursor.execute(self.sql_command["create"].format(self.table_name, data[:-1]))
-        self.table_names.append(self.table_name)
-        self.update_comboBox()
+            self.table_name = self.dlg_ui.lineEdit.text() 
+            self.cursor.execute(self.sql_command["create"].format(self.table_name, data[:-1]))
+            self.table_names.append(self.table_name)
+            self.update_comboBox()
+        except:
+            QMessageBox.critical(self, "Error", "Не удалось создать таблицу")
+
+    def showDlgCortegeAdd(self):
+        self.dlg = QtWidgets.QDialog()
+        self.dlg_ui = Cortege.Ui_Dialog()
+        self.dlg_ui.setupUi(self.dlg)
+
+        self.dlg_ui.tableWidget.setColumnCount(len(self.table_header))
+        self.dlg_ui.tableWidget.setHorizontalHeaderLabels(self.table_header)
+        self.dlg.show()
+
+        self.dlg_ui.buttonBox.accepted.connect(self.insert_cortege_db)
+        self.dlg_ui.buttonBox.rejected.connect(self.dlg.close)
 
     def insert_cortege_db(self):
-        text, ok = QInputDialog.getText(self, "Вставка","Введите кортеж: ")
-        if ok and text:
-            insert = sql.SQL(self.sql_command["cortege"].format(self.table_name, text))
-            self.cursor.execute(insert)	
-            self.get_table()
+        try:
+            text = ""
+            for row in range(self.dlg_ui.tableWidget.rowCount()):
+                for col in range(len(self.table_header)):
+                    if self.dlg_ui.tableWidget.item(row, col):
+                        text += self.dlg_ui.tableWidget.item(row, col).text() + ','
+                    else:
+                        text += "NULL" + ','
+            if text:
+                insert = sql.SQL(self.sql_command["delete"].format(self.table_name, text[:-1]))
+                self.cursor.execute(insert)	
+                self.get_table()
+        except:
+            QMessageBox.critical(self, "Error", "Не удалось вставить кортеж")
+
 
     def delete_cortege_db(self):
-        text, ok = QInputDialog.getText(self, "Удаление","Введите кортеж: ")
-        if ok and text:
-            delete = sql.SQL(self.sql_command["delete"].format(self.table_name, text))
-            self.cursor.execute(delete)
-            self.get_table()
+        try:
+            text, ok = QInputDialog.getText(self, "Удаление","Введите строку: ")
+            if text and ok:
+                insert = sql.SQL(self.sql_command["delete"].format(self.table_name, text))
+                self.cursor.execute(insert)	
+                self.get_table()
+        except:
+            QMessageBox.critical(self, "Error", "Не удалось удалить кортеж")
 
-    def insertf_db(self):
-        insert = sql.SQL(self.sql_command["copy"].format(self.table_name, self.fname))
-        self.cursor.execute(insert)
-        self.update_table()
+    def insert_file_db(self):
+        try:
+            insert = sql.SQL(self.sql_command["copy"].format(self.table_name, self.fname))
+            self.cursor.execute(insert)
+            self.update_table()
+        except:
+            QMessageBox.critical(self, "Error", "Не удалось скопировать данные")
+
 
     def delete_db(self):
-        if self.table_names:
-            self.table_name, ok = QInputDialog.getItem(self, "выберите таблицу",
-                                                        "название таблиц:", self.table_names, 0, False)
-        if ok and self.table_name:
-            self.cursor.execute(self.sql_command["drop"].format(self.table_name))
-            self.table_names.remove(self.table_name)
-            self.update_comboBox()
+        try:
+            if self.table_names:
+                self.table_name, ok = QInputDialog.getItem(self, "выберите таблицу",
+                                                            "название таблиц:", self.table_names, 0, False)
+            if ok and self.table_name:
+                self.cursor.execute(self.sql_command["drop"].format(self.table_name))
+                self.table_names.remove(self.table_name)
+                self.update_comboBox()
+        except:
+            QMessageBox.critical(self, "Error", "Не удалось удалить таблицу")
+
 
     def init_comboBox(self):
         self.table_names = []
         for name in self.cursor:
             self.table_names.append(name[0])
             self.ui.comboBox.addItem(name[0])
-        self.table_name = self.table_names[0]
+        if self.table_names:
+            self.table_name = self.table_names[0]
         self.get_table()
 
     def update_comboBox(self):
@@ -223,10 +264,17 @@ class DB_GUI(QtWidgets.QMainWindow):
                 for row in reader: 
                     self.table.append(row)
         except IOError:
-            print("I/O error")
+            QMessageBox.critical(self, "Error", "Не удалось прочитать файл")
 
     def save(self):
-        pass
+        try:
+            with open(self.fname, "w", errors='ignore', encoding='utf-8', newline='') as f:
+                writer = csv.writer(f, delimiter=';')
+                writer.writerow(self.table_header)
+                for row in self.table: 
+                    writer.writerow(row)
+        except IOError:
+            QMessageBox.critical(self, "Error", "Не удалось сохранить файл")
     
     def save_as(self):
         self.fname = QFileDialog.getSaveFileName(self, 'Сохранить как...', '/home')[0]
@@ -237,7 +285,7 @@ class DB_GUI(QtWidgets.QMainWindow):
                 for row in self.table: 
                     writer.writerow(row)
         except IOError:
-            print("I/O error")
+            QMessageBox.critical(self, "Error", "Не удалось сохранить файл")
 
     def close_app(self):
         self.conn.close()
@@ -248,7 +296,6 @@ def main():
     app = QtWidgets.QApplication([])
     application = DB_GUI()
     application.show()
-    
     sys.exit(app.exec())
 
 

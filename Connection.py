@@ -13,7 +13,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(401, 233)
+        Dialog.setFixedSize(401, 233)
+        Dialog.setWindowIcon(QtGui.QIcon("image\\database.png"))
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(40, 190, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)

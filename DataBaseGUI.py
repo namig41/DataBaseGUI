@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(631, 321)
         MainWindow.setWindowTitle("DataBase")
-        MainWindow.setWindowIcon(QtGui.QIcon("database.png"))
+        MainWindow.setWindowIcon(QtGui.QIcon("image\\database.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
