@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'DataBaseGUI.ui'
+# Form implementation generated from reading ui file 'ui/DataBaseGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.1
 #
@@ -13,18 +13,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.setFixedSize(631, 321)
-        MainWindow.setWindowTitle("DataBase")
-        MainWindow.setWindowIcon(QtGui.QIcon("image\\database.png"))
+        MainWindow.setFixedSize(1107, 845)
+        MainWindow.setWindowIcon(QtGui.QIcon("image/database.png"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(10, 70, 611, 191))
+        self.tableWidget.setGeometry(QtCore.QRect(10, 70, 1081, 721))
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 20, 341, 41))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 20, 401, 41))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -33,24 +32,22 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
         self.lineEdit = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
-        self.lineEdit.setStyleSheet(" background-color: rgb(240, 240, 240); \n"
-" border: none;\n"
-" border-bottom: 2px solid black;")
+        self.lineEdit.setStyleSheet(" background-color: rgb(240, 240, 240); \n" " border: none;\n" " border-bottom: 2px solid black;")
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
         self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.pushButton.setStyleSheet("border-color: rgb(46, 52, 54);\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(46, 52, 54);\n"
-"alternate-background-color: rgb(136, 138, 133);\n")
+"alternate-background-color: rgb(136, 138, 133);")
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(470, 30, 151, 25))
+        self.comboBox.setGeometry(QtCore.QRect(930, 30, 151, 25))
         self.comboBox.setObjectName("comboBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 631, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1107, 22))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -122,8 +119,11 @@ class Ui_MainWindow(object):
         self.action_3.setText(_translate("MainWindow", "Сохранить как..."))
         self.action_4.setText(_translate("MainWindow", "Выход"))
         self.action_5.setText(_translate("MainWindow", "Таблицу"))
+        self.action_7.setText(_translate("MainWindow", "Атрибут"))
         self.action_9.setText(_translate("MainWindow", "Подключиться"))
         self.action_10.setText(_translate("MainWindow", "Кортеж"))
         self.action_6.setText(_translate("MainWindow", "Таблицу"))
         self.action_11.setText(_translate("MainWindow", "Кортеж"))
+        self.action_12.setText(_translate("MainWindow", "Атрибут"))
+        self.action_13.setText(_translate("MainWindow", "Список таблиц"))
         self.action_8.setText(_translate("MainWindow", "Скопировать"))

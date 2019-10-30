@@ -27,10 +27,11 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.table_header = []
         self.table_name   = "" 
         self.flag = True
+        self.colors = [QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
 
         self.sql_command["create"]    = "CREATE TABLE {} ({});"
         self.sql_command["select"]    = "SELECT {} FROM {};"
-        self.sql_command["cortege"]   = "INSERT INTO {} VALUES ({});"
+        self.sql_command["insert"]   = "INSERT INTO {} VALUES ({});"
         self.sql_command["delete"]    = "DELETE FROM {} WHERE {};"
         self.sql_command["drop"]      = "DROP TABLE IF EXISTS {};" 
         self.sql_command["sample"]    = "SELECT {} FROM {} WHERE {};"
@@ -85,10 +86,9 @@ class DB_GUI(QtWidgets.QMainWindow):
             self.table_header.append(i[0])
 
     def update_table(self):
-        self.ui.tableWidget.setRowCount(len(self.table))
-        self.ui.tableWidget.setColumnCount(len(self.table[0]))
-
         self.attribute_list()
+        self.ui.tableWidget.setRowCount(len(self.table))
+        self.ui.tableWidget.setColumnCount(len(self.table_header))
         self.ui.tableWidget.setHorizontalHeaderLabels(self.table_header)
 
         row = 0
@@ -110,8 +110,7 @@ class DB_GUI(QtWidgets.QMainWindow):
                 self.table.append(i)
 
             self.attribute_list()
-            if self.table:
-                self.update_table()
+            self.update_table()
 
     def search_db(self):
         search_text = self.ui.lineEdit.text()
@@ -127,15 +126,27 @@ class DB_GUI(QtWidgets.QMainWindow):
                 if self.table:
                     self.update_table()
             else:
-                i = 0
-                for row in self.table:
-                    j = 0
-                    for item in row:
-                        if str(item) == search_text:
-                            self.ui.tableWidget.item(i, j).setBackground(QtCore.Qt.red)
-                        j += 1
-                    i += 1 
+                c = self.colors.pop()
+                if search_text[-1] == '\'':
+                    i = 0
+                    for row in self.table:
+                        j = 0
+                        for item in row:
+                            if search_text[:-1] in str(item):
+                                self.ui.tableWidget.item(i, j).setBackground(c)
+                            j += 1
+                        i += 1 
+                else:
+                    i = 0
+                    for row in self.table:
+                        j = 0
+                        for item in row:
+                            if search_text == str(item):
+                                self.ui.tableWidget.item(i, j).setBackground(c)
+                            j += 1
+                        i += 1 
         else:
+            self.colors = [QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
             self.update_table()
 
         
@@ -151,7 +162,7 @@ class DB_GUI(QtWidgets.QMainWindow):
         for row in range(self.dlg_ui.tableWidget.rowCount()):
             combo = QtWidgets.QComboBox(self.dlg)
             combo.addItem("INT")
-            combo.addItem("DOUBLE")
+            combo.addItem("REAL")
             combo.addItem("TEXT")
             combo.addItem("TIME")
             combo.addItem("DATE")
@@ -197,7 +208,7 @@ class DB_GUI(QtWidgets.QMainWindow):
                     else:
                         text += "NULL" + ','
             if text:
-                insert = sql.SQL(self.sql_command["delete"].format(self.table_name, text[:-1]))
+                insert = sql.SQL(self.sql_command["insert"].format(self.table_name, text[:-1]))
                 self.cursor.execute(insert)	
                 self.get_table()
         except:
@@ -206,7 +217,7 @@ class DB_GUI(QtWidgets.QMainWindow):
 
     def delete_cortege_db(self):
         try:
-            text, ok = QInputDialog.getText(self, "Удаление","Введите строку: ")
+            text, ok = QInputDialog.getText(self, "Удаление", "Введите строку: ")
             if text and ok:
                 insert = sql.SQL(self.sql_command["delete"].format(self.table_name, text))
                 self.cursor.execute(insert)	
@@ -215,19 +226,19 @@ class DB_GUI(QtWidgets.QMainWindow):
             QMessageBox.critical(self, "Error", "Не удалось удалить кортеж")
 
     def insert_file_db(self):
-        try:
+        if True:
             insert = sql.SQL(self.sql_command["copy"].format(self.table_name, self.fname))
             self.cursor.execute(insert)
             self.update_table()
-        except:
+        else:
             QMessageBox.critical(self, "Error", "Не удалось скопировать данные")
 
 
     def delete_db(self):
         try:
             if self.table_names:
-                self.table_name, ok = QInputDialog.getItem(self, "выберите таблицу",
-                                                            "название таблиц:", self.table_names, 0, False)
+                self.table_name, ok = QInputDialog.getItem(self, "Выберите таблицу",
+                                                            "Название таблиц:", self.table_names, 0, False)
             if ok and self.table_name:
                 self.cursor.execute(self.sql_command["drop"].format(self.table_name))
                 self.table_names.remove(self.table_name)
@@ -240,7 +251,7 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.table_names = []
         for name in self.cursor:
             self.table_names.append(name[0])
-            self.ui.comboBox.addItem(name[0])
+        self.update_comboBox()
         if self.table_names:
             self.table_name = self.table_names[0]
         self.get_table()
@@ -248,11 +259,9 @@ class DB_GUI(QtWidgets.QMainWindow):
     def update_comboBox(self):
         self.ui.comboBox.clear()
         for name in self.table_names:
-            self.ui.comboBox.addItem(name[0])
+            self.ui.comboBox.addItem(name)
 
-        if self.flag:
-            self.ui.comboBox.currentTextChanged.connect(self.update_table_name)
-            self.flag = False
+        self.ui.comboBox.currentTextChanged.connect(self.update_table_name)
 
     def read_file(self):
         self.fname = QFileDialog.getOpenFileName(self, 'Открыть файл', '/home')[0]
