@@ -27,7 +27,7 @@ class DB_GUI(QtWidgets.QMainWindow):
         self.table_header = []
         self.table_name   = "" 
         self.flag = True
-        self.colors = [QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
+        self.colors = [QtCore.Qt.blue, QtCore.Qt.darkMagenta, QtCore.Qt.darkRed, QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
 
         self.sql_command["create"]    = "CREATE TABLE {} ({});"
         self.sql_command["select"]    = "SELECT {} FROM {};"
@@ -146,7 +146,7 @@ class DB_GUI(QtWidgets.QMainWindow):
                             j += 1
                         i += 1 
         else:
-            self.colors = [QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
+            self.colors = [QtCore.Qt.blue, QtCore.Qt.darkMagenta, QtCore.Qt.darkRed, QtCore.Qt.red, QtCore.Qt.green, QtCore.Qt.yellow, QtCore.Qt.cyan]
             self.update_table()
 
         

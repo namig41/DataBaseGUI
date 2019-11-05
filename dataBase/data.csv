@@ -1,501 +1,501 @@
 id;name;surname;age;group;gpa
-0;Autum;Pere;10;AC-12-1;3.02
-1;Domini;For;9;AH-11-1;2.93
-2;Alliso;Fo;15;BB-10-1;2.42
-3;Sybi;Wilso;10;CH-11-6;2.27
-4;Domini;Simpso;18;JB-13-5;4.47
-5;Ameli;Washingto;14;GJ-13-8;4.35
-6;Ada;Taylo;14;BE-11-6;3.7
-7;Sheil;Ree;12;DA-12-7;2.28
-8;Danie;McDonald (Mcdonald*;10;DA-12-7;2.88
-9;Antoni;Gutierre;10;EE-12-7;2.04
-10;Domini;Jone;12;FF-15-5;3.96
-11;Sierr;War;18;CH-11-6;3.0
-12;Ashto;Steven;9;JH-10-8;2.94
-13;Andre;Simpso;20;BA-13-0;4.08
-14;Savanna;Flore;13;BF-13-0;4.71
-15;Alejandr;Medin;13;BA-13-0;3.47
-16;Donal;Reye;20;BB-10-1;2.91
-17;Adelin;Meye;18;HG-10-7;2.96
-18;Kately;Mitchel;9;JC-10-6;3.22
-19;Set;Bel;19;BA-13-0;4.73
-20;Shirle;Hun;18;EG-11-6;4.79
-21;Angelin;Anderso;19;HB-12-5;4.07
-22;Denni;Kenned;16;BF-13-0;3.31
-23;Adria;Sander;19;GJ-13-8;3.52
-24;Ad;Alvare;14;DA-12-7;2.4
-25;Aida;Medin;11;BB-10-1;2.92
-26;Antoni;Jone;16;JF-13-8;3.63
-27;Sharo;Ree;12;FF-15-5;4.74
-28;Susa;Nelso;11;EG-11-6;3.87
-29;Ad;Barne;11;EE-12-7;2.77
-30;Alex;Well;9;CH-11-6;4.83
-31;Abraha;Romer;16;JF-13-8;2.81
-32;Audre;Campbel;9;AC-12-1;2.01
-33;Alber;Ston;14;CH-11-6;2.68
-34;Alexandr;Martine;13;HG-10-7;4.81
-35;Ala;McDonald (Mcdonald*;13;JC-10-6;2.51
-36;Donal;Tucke;19;JC-10-6;3.38
-37;Stephani;Hunte;13;GB-10-7;2.92
-38;Sierr;Elli;18;ED-13-7;4.47
-39;Ameli;Mill;13;BA-13-0;3.53
-40;Austi;Ree;9;AC-12-1;4.27
-41;Anit;Bel;12;EE-12-7;2.56
-42;Ashto;Howar;15;FF-15-5;4.02
-43;Sebastia;Woo;11;BB-10-1;4.49
-44;Kyli;William;19;AC-12-1;2.42
-45;Ariann;Robert;20;FJ-15-8;4.3
-46;Aida;Haye;10;EG-11-6;4.73
-47;Alex;Foste;9;BG-10-8;2.49
-48;Kimberl;Thompso;20;ED-13-7;4.27
-49;Devi;Perr;11;FF-15-5;3.96
-50;Aida;Griffi;18;ED-13-7;2.25
-51;Ashto;Bennet;14;AC-12-1;2.85
-52;Kathry;Taylo;18;JC-10-6;3.71
-53;Anit;Jorda;11;BA-13-0;3.93
-54;Set;Herrer;16;JF-13-8;4.07
-55;Angelin;Jimene;11;BG-10-8;2.44
-56;Adelin;Moor;10;BF-13-0;3.77
-57;Alexi;Taylo;9;EE-12-7;2.56
-58;Agath;Taylo;18;CK-10-2;2.83
-59;Dieg;Barne;12;CK-10-2;3.05
-60;Alexandr;Jame;15;AC-12-1;2.89
-61;Alber;Reynold;11;HB-12-5;3.67
-62;Abraha;Brook;11;HB-12-5;3.18
-63;Alfre;Smit;14;JF-13-8;4.07
-64;Ange;Perr;19;EE-12-7;4.47
-65;Savanna;Woo;12;JC-10-6;2.16
-66;Ad;Patterso;12;EG-11-6;2.88
-67;Audre;For;10;JF-13-8;2.44
-68;Autum;Lope;9;HB-12-5;4.3
-69;Sebastia;Freema;12;JD-12-1;2.54
-70;Abraha;Turne;19;JF-13-8;4.25
-71;Susa;Hun;14;BA-13-0;4.0
-72;Shirle;Ston;18;BG-10-8;2.58
-73;Sandr;Kell;14;HB-12-5;3.98
-74;Devi;Wagne;13;BG-10-8;4.04
-75;Aver;Holme;14;CK-10-2;4.53
-76;Sharo;Ros;17;JB-13-5;2.34
-77;Alex;Web;17;JF-13-8;4.27
-78;Ad;Mendoz;19;JB-13-5;4.42
-79;Dieg;Watso;14;ED-13-7;3.2
-80;Shirle;Dia;19;JD-12-1;3.16
-81;Alexandr;Watso;14;CH-11-6;2.87
-82;Set;Robertso;9;ED-13-7;2.37
-83;Sophi;Haye;19;AH-11-1;4.67
-84;Sebastia;Cru;11;AH-11-1;3.23
-85;Ariann;Brow;20;GB-10-7;3.83
-86;Kayl;Wilso;17;JC-10-6;4.66
-87;Susa;Mendoz;15;ED-13-7;3.63
-88;Stephani;Ros;17;EG-11-6;2.83
-89;Anit;Colema;16;BF-13-0;3.9
-90;Dougla;Thoma;10;JH-10-8;2.61
-91;Susa;Robinso;12;BE-11-6;3.83
-92;Aaro;Gonzale;12;CH-11-6;3.77
-93;Aida;Ros;9;GB-10-7;4.44
-94;Davi;Le;19;ED-13-7;4.93
-95;Domini;Pere;14;JF-13-8;3.46
-96;Ashto;Martine;16;FF-15-5;2.62
-97;Dieg;Stewar;18;BB-10-1;3.81
-98;Stephani;Alle;9;JB-13-5;2.63
-99;Simo;Hun;16;BB-10-1;2.74
-100;Alliso;Evan;12;AC-12-1;5.0
-101;Sea;Wrigh;14;CK-10-2;2.47
-102;Set;Wallac;20;AC-12-1;4.92
-103;Alex;Thompso;20;HG-10-7;2.17
-104;Aver;Castill;19;JH-10-8;3.65
-105;Ashto;Moren;9;BE-11-6;3.22
-106;Alexi;Chave;13;FF-15-5;2.25
-107;Ameli;Howar;12;BB-10-1;4.15
-108;Alis;Johnso;18;JH-10-8;2.34
-109;Antoni;Olso;17;JA-11-6;3.34
-110;Samue;River;11;FF-15-5;4.43
-111;Sybi;Lon;19;JC-10-6;2.6
-112;Alfre;Fishe;10;DA-12-7;3.06
-113;Alejandr;Holme;9;AC-12-1;3.09
-114;Abraha;Walke;11;BE-11-6;3.56
-115;Andre;Alvare;12;CH-11-6;3.17
-116;Sharo;Hamilto;9;FJ-15-8;3.89
-117;Amand;Warre;17;CH-11-6;4.85
-118;Alber;Haye;9;JH-10-8;4.85
-119;Amand;Wes;9;BE-11-6;3.82
-120;Alexande;Nichol;9;ED-13-7;3.2
-121;Ala;For;16;HB-12-5;4.18
-122;Kathry;Hernande;18;CH-11-6;3.86
-123;Adelin;Pate;16;JD-12-1;2.04
-124;Av;Graha;20;AC-12-1;2.65
-125;Sheil;Flore;16;JD-12-1;4.7
-126;Denni;Alexande;9;EG-11-6;2.82
-127;Agath;Henderso;14;BA-13-0;2.63
-128;Savanna;Parke;14;FF-15-5;3.44
-129;Ambe;Hil;9;JH-10-8;2.25
-130;Kyli;Rodrigue;17;CH-11-6;4.51
-131;Alexandr;Mill;9;JD-12-1;2.33
-132;Shirle;Le;13;GJ-13-8;2.55
-133;Ad;Marshal;14;EG-11-6;3.38
-134;Alexi;Snyde;11;BB-10-1;2.54
-135;Alber;Moren;16;JD-12-1;2.86
-136;Ambe;Hil;11;AC-12-1;2.45
-137;Ange;Thompso;14;BB-10-1;3.4
-138;Shirle;Garci;11;GJ-13-8;4.93
-139;Alis;Whit;20;JC-10-6;3.46
-140;Simo;Co;9;FF-15-5;3.85
-141;Austi;Clar;15;HB-12-5;3.77
-142;An;Gonzale;17;CK-10-2;4.73
-143;Amand;Wood;14;JA-11-6;3.95
-144;Alis;Ferguso;17;HG-10-7;3.54
-145;Susa;Sander;9;JF-13-8;2.35
-146;Sophi;Elli;14;HG-10-7;4.83
-147;Adelin;Marti;11;CK-10-2;4.86
-148;Shirle;Morale;17;GB-10-7;4.9
-149;Samue;For;12;HB-12-5;3.26
-150;Ameli;Phillip;12;JH-10-8;3.97
-151;Dieg;Morri;14;HB-12-5;2.32
-152;Adelin;Martine;18;AH-11-1;4.92
-153;Anthon;Henderso;10;FJ-15-8;3.23
-154;Domini;Alvare;11;JB-13-5;2.84
-155;Alexandr;Marshal;15;HG-10-7;3.46
-156;Aver;Kin;15;HB-12-5;2.64
-157;Sar;Nelso;9;CH-11-6;2.11
-158;Ale;Haye;20;FF-15-5;4.92
-159;Samue;Ki;16;JH-10-8;4.92
-160;Agath;War;9;CK-10-2;4.52
-161;Alliso;Anderso;10;JC-10-6;2.32
-162;Alliso;Robinso;14;BF-13-0;4.11
-163;Alejandr;Gonzale;20;EG-11-6;2.42
-164;Ameli;Schmid;16;CK-10-2;3.3
-165;Kayl;Mendoz;11;AC-12-1;2.72
-166;Sara;McDonald (Mcdonald*;11;ED-13-7;4.91
-167;Ariann;Bryan;16;EE-12-7;3.17
-168;Alexi;Wallac;17;CH-11-6;3.7
-169;Aaro;Phillip;19;ED-13-7;4.52
-170;Ale;Jame;17;HG-10-7;3.12
-171;Audre;Scot;13;GJ-13-8;4.5
-172;Kayle;Ramo;20;JB-13-5;3.87
-173;Ashto;Reynold;9;GB-10-7;4.21
-174;Ashle;Coo;15;BA-13-0;3.39
-175;Susa;Ros;14;JA-11-6;2.56
-176;Dieg;Thoma;19;CK-10-2;2.57
-177;Ada;Jenkin;15;BB-10-1;3.69
-178;Sybi;Murra;11;GB-10-7;2.93
-179;Aver;Hal;17;FJ-15-8;2.62
-180;Ashto;Wilso;11;EE-12-7;3.06
-181;Sophi;Simpso;13;JH-10-8;3.65
-182;Sharo;Thompso;18;GJ-13-8;4.49
-183;Simo;Wes;18;FF-15-5;2.11
-184;Sar;Brow;16;AC-12-1;2.45
-185;Sheil;Ros;18;CH-11-6;4.82
-186;Autum;Murph;16;HG-10-7;2.28
-187;Kately;Romer;17;HG-10-7;3.12
-188;Denni;Foste;15;DA-12-7;3.63
-189;Devi;Richardso;19;BE-11-6;3.08
-190;Sara;Colema;20;GJ-13-8;2.77
-191;Alis;Collin;9;JH-10-8;3.77
-192;Sar;Hunte;9;BG-10-8;2.51
-193;Sharo;Graha;11;AH-11-1;2.21
-194;Autum;Ramo;10;AH-11-1;3.73
-195;Adelin;Thoma;17;AC-12-1;3.07
-196;Andre;Edward;17;DA-12-7;3.76
-197;Adelin;Barne;10;FJ-15-8;2.15
-198;Sebastia;Watso;20;HB-12-5;3.04
-199;Andre;Jenkin;17;BG-10-8;4.74
-200;Danie;Howar;10;FJ-15-8;3.58
-201;Aver;Tucke;15;JA-11-6;3.4
-202;Autum;Sanche;18;JD-12-1;3.12
-203;Ale;Johnso;18;BG-10-8;4.48
-204;Denni;Romer;9;ED-13-7;3.71
-205;Aaro;Maso;10;BE-11-6;2.59
-206;Sharo;Washingto;15;BF-13-0;3.54
-207;Alexi;Cru;13;JA-11-6;3.9
-208;Katherin;Holme;12;CH-11-6;4.01
-209;Shirle;Steven;12;JB-13-5;2.13
-210;Simo;Moor;12;BB-10-1;2.88
-211;Simo;Hamilto;12;CH-11-6;3.37
-212;Simo;Wood;15;JA-11-6;2.84
-213;Sierr;Rui;14;JA-11-6;4.15
-214;Alyss;Orti;10;GB-10-7;3.2
-215;Ariann;Vasque;12;AC-12-1;3.02
-216;Kayl;Taylo;10;FF-15-5;2.9
-217;Abraha;Peterso;9;JC-10-6;2.74
-218;Alis;Colema;10;JA-11-6;4.1
-219;Alber;Schmid;10;GJ-13-8;4.68
-220;Anthon;Sanche;15;HB-12-5;4.83
-221;Ameli;Ramire;12;JD-12-1;2.47
-222;Sar;Colema;19;JC-10-6;4.3
-223;Adria;Mill;16;GJ-13-8;3.0
-224;Alfre;Martine;11;HB-12-5;3.92
-225;Sierr;Jenkin;20;JB-13-5;3.61
-226;Sharo;Martine;12;AC-12-1;3.54
-227;Antoni;Robert;12;BE-11-6;3.32
-228;An;Ramire;16;EG-11-6;4.22
-229;Kayle;Davi;10;DA-12-7;3.78
-230;Kayl;Marshal;19;HG-10-7;4.21
-231;Agath;Turne;9;ED-13-7;3.73
-232;Ale;Warre;12;EE-12-7;4.37
-233;Alliso;Turne;10;JC-10-6;2.79
-234;Sofi;Coo;17;GJ-13-8;4.37
-235;Kimberl;Sulliva;16;JF-13-8;3.04
-236;Alfre;Robertso;12;EE-12-7;3.71
-237;Devi;Co;20;AH-11-1;4.53
-238;Kayle;Web;12;GJ-13-8;3.89
-239;Ange;Jone;11;JC-10-6;2.32
-240;Ashle;Gree;11;FF-15-5;4.05
-241;Samue;Sha;18;JB-13-5;4.65
-242;Kately;Medin;9;BE-11-6;2.22
-243;Aaro;Evan;19;EG-11-6;3.27
-244;Dougla;Torre;15;EE-12-7;2.3
-245;Ambe;Ramire;15;GB-10-7;2.44
-246;Anthon;Robert;14;HG-10-7;4.15
-247;Ameli;Vasque;14;FJ-15-8;2.16
-248;Alex;Pere;15;AH-11-1;2.7
-249;Sea;Palme;10;ED-13-7;4.24
-250;Kyli;Moor;16;BB-10-1;4.71
-251;Av;Morga;15;GJ-13-8;4.82
-252;Adelin;Pate;20;JH-10-8;2.21
-253;Ariann;Wrigh;11;ED-13-7;3.03
-254;Ariann;Simpso;19;AH-11-1;2.46
-255;Angelin;Marshal;20;HB-12-5;3.2
-256;Donal;Pate;15;GJ-13-8;4.63
-257;Ashto;Ferguso;19;BB-10-1;3.78
-258;Av;Dia;19;AC-12-1;4.55
-259;Sybi;Evan;10;AH-11-1;2.97
-260;Alexandr;Watso;15;GJ-13-8;2.69
-261;Ange;Alvare;11;BA-13-0;2.15
-262;Sophi;Coo;19;EE-12-7;4.26
-263;Sofi;Moor;16;GB-10-7;2.13
-264;Devi;Meye;13;HB-12-5;3.78
-265;Ada;Cru;13;JH-10-8;2.61
-266;Alejandr;Davi;10;JH-10-8;2.04
-267;Abraha;Maso;9;AC-12-1;2.93
-268;Alis;Steven;10;JC-10-6;4.99
-269;Aaro;Edward;20;AH-11-1;3.11
-270;Savanna;Adam;15;ED-13-7;4.95
-271;Domini;Pere;12;BF-13-0;4.77
-272;Alliso;Vasque;11;EG-11-6;4.92
-273;Sebastia;Fishe;15;EG-11-6;2.53
-274;Kimberl;Burn;19;AH-11-1;4.28
-275;Aida;Jackso;14;JH-10-8;3.37
-276;Alex;Carte;18;ED-13-7;4.16
-277;Devi;Web;13;HG-10-7;2.78
-278;Alliso;Sha;10;BF-13-0;2.3
-279;Katherin;Olso;18;FJ-15-8;4.43
-280;Alfre;Snyde;17;CH-11-6;4.97
-281;Samue;Marshal;18;HB-12-5;2.01
-282;Alber;Gree;13;EG-11-6;4.22
-283;Sophi;Haye;16;AH-11-1;2.35
-284;Danie;Pate;18;JF-13-8;4.61
-285;Ad;Gutierre;16;BG-10-8;4.56
-286;Ashto;Jorda;12;GJ-13-8;2.11
-287;Alexandr;Washingto;14;FJ-15-8;2.97
-288;Aver;Walke;18;EE-12-7;4.58
-289;Shirle;Hunte;9;FF-15-5;3.95
-290;Alexande;Richardso;9;EE-12-7;4.22
-291;Alexi;Le;19;AC-12-1;3.15
-292;Andre;Tucke;15;DA-12-7;2.64
-293;Danie;Jame;10;DA-12-7;4.51
-294;Stephani;Thompso;17;CK-10-2;3.92
-295;Katherin;Crawfor;13;EE-12-7;2.19
-296;Set;Clar;12;JA-11-6;4.21
-297;Anthon;Perr;13;FJ-15-8;3.45
-298;Anthon;Colema;14;HB-12-5;3.2
-299;Susa;Morale;9;AC-12-1;3.55
-300;Ange;Walke;17;BB-10-1;4.55
-301;Alexande;Kenned;13;FF-15-5;4.92
-302;Alfre;Bennet;17;BB-10-1;2.08
-303;Alexandr;Gree;16;EG-11-6;2.46
-304;Ashto;Patterso;14;GB-10-7;4.08
-305;Ale;Gonzale;11;DA-12-7;3.48
-306;Devi;Schmid;9;EG-11-6;3.36
-307;Ambe;Pate;15;GB-10-7;2.28
-308;An;Moor;13;BE-11-6;2.05
-309;Ada;Holme;17;EG-11-6;3.89
-310;Sandr;Ramire;14;CK-10-2;3.83
-311;Dougla;Chave;19;JH-10-8;4.55
-312;Ange;Jorda;14;HG-10-7;3.96
-313;Ange;Crawfor;14;JH-10-8;2.6
-314;Ange;Jenkin;17;JB-13-5;3.6
-315;Savanna;Anderso;18;BA-13-0;2.54
-316;Sara;Jone;12;GJ-13-8;3.99
-317;Simo;Smit;12;FF-15-5;4.33
-318;Susa;River;18;BG-10-8;3.16
-319;Amand;Jimene;13;BE-11-6;4.43
-320;Anit;Wood;14;FF-15-5;4.24
-321;Dougla;Castill;15;BG-10-8;4.64
-322;Anthon;Chave;13;JH-10-8;2.86
-323;Sar;Wrigh;16;AC-12-1;3.57
-324;Samue;Mitchel;19;AH-11-1;2.02
-325;Sheil;Simpso;17;JD-12-1;4.52
-326;Alyss;Fo;20;ED-13-7;2.66
-327;An;Meye;13;JC-10-6;2.6
-328;Dieg;Gree;17;AH-11-1;3.0
-329;Alexandr;Vasque;14;DA-12-7;2.16
-330;Stephani;Gutierre;11;BB-10-1;3.16
-331;Devi;Fishe;18;JH-10-8;4.2
-332;Ambe;Peterso;15;BF-13-0;3.23
-333;Austi;Jackso;14;JF-13-8;4.89
-334;Sandr;Jame;13;BG-10-8;4.53
-335;Arian;Nguye;18;EE-12-7;4.92
-336;Kately;Herrer;19;GJ-13-8;3.77
-337;Abraha;Garci;13;JA-11-6;3.78
-338;Andre;Anderso;14;JD-12-1;2.36
-339;Alyss;Watso;18;BE-11-6;2.86
-340;Ala;Kin;16;EG-11-6;4.88
-341;Ariann;Anderso;19;EG-11-6;2.95
-342;Sea;Lope;13;JF-13-8;4.71
-343;Alyss;Alexande;14;BA-13-0;3.71
-344;Sofi;Ki;14;DA-12-7;4.55
-345;Sofi;Morri;9;FJ-15-8;4.76
-346;Kathry;Maso;13;BB-10-1;3.21
-347;Kayle;Morri;20;JF-13-8;3.2
-348;Ameli;Kenned;13;JF-13-8;4.44
-349;Denni;Murra;17;JD-12-1;3.97
-350;Anthon;Gome;20;JH-10-8;3.87
-351;Autum;Well;10;JC-10-6;2.43
-352;Audre;Hick;11;BA-13-0;2.1
-353;Sofi;Carte;20;GB-10-7;3.83
-354;Autum;Taylo;20;JA-11-6;3.3
-355;Dieg;Gibso;16;FF-15-5;2.61
-356;Andre;Ferguso;20;FJ-15-8;2.64
-357;Kately;Porte;17;JA-11-6;2.32
-358;Ale;Harri;19;FF-15-5;2.12
-359;Alliso;Kell;16;DA-12-7;3.98
-360;Ange;Hunte;19;GB-10-7;2.49
-361;Donal;Roger;18;JA-11-6;2.52
-362;Davi;Hamilto;12;AH-11-1;3.09
-363;Davi;Lewi;10;HG-10-7;2.73
-364;Av;Garci;20;JA-11-6;4.57
-365;Aver;Russel;12;HG-10-7;2.19
-366;Sebastia;Co;17;JA-11-6;3.17
-367;Kayl;Moor;15;CH-11-6;4.65
-368;Sharo;Fishe;15;BA-13-0;3.08
-369;Sara;Dixo;11;BG-10-8;2.58
-370;Sierr;Murra;18;CK-10-2;3.43
-371;Austi;Sha;12;AH-11-1;4.02
-372;Ala;Roger;10;AH-11-1;2.83
-373;Kathry;Well;9;JF-13-8;2.15
-374;Ale;Robert;19;CH-11-6;2.91
-375;Ange;Mendoz;15;JC-10-6;4.67
-376;Kately;Hun;18;FJ-15-8;2.07
-377;Sea;Morale;12;JH-10-8;4.46
-378;Kyli;Robinso;14;BA-13-0;4.38
-379;Andre;Ramo;13;DA-12-7;3.16
-380;Alis;Schmid;12;JH-10-8;2.58
-381;Sar;Robertso;10;JH-10-8;2.02
-382;Alyss;Butle;10;AC-12-1;3.68
-383;Sebastia;Palme;17;FJ-15-8;2.44
-384;Sophi;Steven;16;AH-11-1;4.8
-385;Dieg;William;16;JF-13-8;3.0
-386;Susa;Fo;9;JH-10-8;2.43
-387;Sierr;Murra;13;JB-13-5;2.11
-388;Alexande;Jame;12;AH-11-1;4.02
-389;Kimberl;Hun;9;JC-10-6;4.92
-390;Sharo;Russel;11;CH-11-6;2.47
-391;Alliso;Hil;10;JF-13-8;2.85
-392;Alber;Freema;18;AH-11-1;3.69
-393;Denni;Hun;12;JB-13-5;4.32
-394;Austi;Reye;18;JH-10-8;2.9
-395;Autum;Crawfor;12;CK-10-2;2.38
-396;Sebastia;Ros;12;JA-11-6;3.14
-397;Alex;Clar;17;GJ-13-8;2.16
-398;Sierr;Richardso;12;JD-12-1;2.65
-399;Sharo;Wes;11;BF-13-0;4.1
-400;Devi;Marshal;9;GB-10-7;3.88
-401;Kayl;Tucke;15;BA-13-0;3.5
-402;Sheil;Murra;19;BE-11-6;3.95
-403;Aida;Gonzale;9;GB-10-7;4.75
-404;Sebastia;Hun;18;ED-13-7;2.82
-405;Savanna;Morga;11;GB-10-7;3.69
-406;Kayl;Washingto;15;JA-11-6;3.79
-407;Dougla;For;11;BG-10-8;4.88
-408;Anit;Meye;16;JD-12-1;4.32
-409;Av;Washingto;9;EG-11-6;4.36
-410;Simo;Elli;18;JA-11-6;2.03
-411;Sandr;Youn;13;BE-11-6;4.62
-412;Alis;Murra;18;GB-10-7;2.01
-413;Aida;Foste;20;GB-10-7;4.31
-414;Simo;Lon;15;JA-11-6;3.63
-415;Aver;Wallac;10;JD-12-1;3.4
-416;Ad;Maso;12;JC-10-6;3.37
-417;Susa;Web;18;AC-12-1;4.05
-418;Ale;Powel;19;HG-10-7;2.99
-419;Dieg;Evan;17;EG-11-6;3.37
-420;Autum;Hughe;18;DA-12-7;3.9
-421;Sharo;Moren;17;JB-13-5;3.05
-422;Adria;Powel;14;BE-11-6;3.13
-423;Alexandr;Herrer;16;FF-15-5;2.19
-424;Kyli;Lon;15;ED-13-7;2.12
-425;Alexandr;Perr;12;EE-12-7;4.15
-426;Shirle;Johnso;15;CK-10-2;4.5
-427;Arian;Brook;14;JF-13-8;4.45
-428;Sandr;Wilso;19;JB-13-5;4.94
-429;Dieg;Hun;18;HG-10-7;3.98
-430;Kayl;Robert;10;BG-10-8;4.27
-431;Arian;Hun;12;FJ-15-8;2.13
-432;Set;Orti;11;BA-13-0;2.74
-433;Samue;Gibso;13;BG-10-8;2.31
-434;Kately;Fishe;17;FJ-15-8;4.08
-435;Sheil;Gonzale;16;EE-12-7;4.75
-436;Katherin;Pate;17;BA-13-0;4.87
-437;Ala;River;13;EG-11-6;3.44
-438;Sofi;Henderso;14;JH-10-8;3.23
-439;Autum;Murra;18;BE-11-6;4.07
-440;Sofi;Pric;17;JB-13-5;2.6
-441;Av;Jackso;10;JF-13-8;4.32
-442;Alyss;Nguye;9;EG-11-6;4.01
-443;Angelin;Graha;18;ED-13-7;2.02
-444;Shirle;Walke;11;FJ-15-8;4.44
-445;Ariann;Ston;14;JF-13-8;2.86
-446;Ameli;Gibso;10;JB-13-5;3.24
-447;Alfre;Rodrigue;13;AH-11-1;2.63
-448;Av;Griffi;18;BG-10-8;4.64
-449;Alejandr;Gonzale;9;ED-13-7;2.59
-450;Samue;Herrer;12;DA-12-7;2.53
-451;Alexi;Jone;15;JH-10-8;3.36
-452;Sophi;Alvare;18;ED-13-7;4.34
-453;Alyss;War;18;JB-13-5;4.05
-454;Alyss;Col;14;CK-10-2;2.8
-455;Savanna;Blac;13;JD-12-1;4.11
-456;Abraha;Fishe;9;JC-10-6;4.08
-457;Shirle;Gordo;9;BF-13-0;4.26
-458;Domini;Gonzale;18;JC-10-6;3.17
-459;Anthon;Hick;11;DA-12-7;4.45
-460;Alyss;Hil;18;JC-10-6;4.83
-461;Ale;Henr;15;JB-13-5;2.19
-462;Sar;Woo;19;DA-12-7;4.95
-463;Shirle;Wood;16;CK-10-2;2.17
-464;Ashle;Hamilto;20;HG-10-7;3.26
-465;Alliso;Ston;11;JD-12-1;2.24
-466;Devi;Co;20;AC-12-1;2.56
-467;Ashle;For;17;JH-10-8;3.67
-468;Katherin;Smit;12;EG-11-6;2.58
-469;Dougla;Turne;11;BB-10-1;3.71
-470;Ariann;Campbel;20;JF-13-8;4.68
-471;Ad;Lope;12;EE-12-7;2.99
-472;Autum;Henr;19;BF-13-0;2.06
-473;Shirle;Co;12;AH-11-1;4.53
-474;Antoni;Davi;10;ED-13-7;2.91
-475;Aida;Maso;15;HB-12-5;2.02
-476;Stephani;Dixo;12;BF-13-0;3.16
-477;Kyli;McDonald (Mcdonald*;14;BG-10-8;2.93
-478;Donal;Jackso;14;BB-10-1;4.65
-479;Andre;Romer;13;ED-13-7;2.14
-480;Susa;For;10;CK-10-2;2.09
-481;Kyli;Morga;11;HG-10-7;3.65
-482;Alis;Thoma;20;FF-15-5;4.52
-483;Kyli;Dia;18;FJ-15-8;2.37
-484;Ashle;Murra;17;HB-12-5;4.96
-485;Alis;Hughe;19;DA-12-7;2.18
-486;Savanna;Powel;14;BG-10-8;2.36
-487;Angelin;Ramire;19;AH-11-1;4.33
-488;Simo;Ramire;10;FJ-15-8;2.06
-489;Davi;Patterso;18;JA-11-6;2.66
-490;Arian;Tucke;13;JB-13-5;3.79
-491;Anit;Haye;17;CH-11-6;4.54
-492;Danie;Web;11;BB-10-1;4.46
-493;Dieg;Butle;15;EG-11-6;3.68
-494;Ashto;Palme;17;JA-11-6;2.21
-495;Savanna;Burn;19;ED-13-7;3.73
-496;Sebastia;Medin;11;JB-13-5;4.38
-497;Kimberl;Hamilto;12;JD-12-1;2.16
-498;Anthon;Bennet;19;AC-12-1;4.11
-499;Alexi;Tucke;12;BB-10-1;2.75
+0;Domini;Garci;9;4 E;3.85
+1;Kayl;Alle;19;1 E;4.32
+2;Sierr;Robinso;12;3 F;4.64
+3;Anthon;Butle;13;5 A;3.69
+4;Aida;Powel;14;5 A;3.78
+5;Amand;Smit;18;2 A;2.36
+6;Sea;Powel;14;11 F;3.1
+7;Susa;Hughe;14;11 E;2.31
+8;Antoni;Gree;11;5 A;2.38
+9;Dieg;Castill;11;11 E;3.57
+10;Sophi;Ston;20;5 B;3.78
+11;Ambe;Evan;17;11 E;4.87
+12;Samue;Romer;19;2 D;2.56
+13;Ala;Taylo;20;10 D;4.39
+14;Sandr;Hughe;14;11 C;4.23
+15;Aaro;Kell;12;5 B;3.02
+16;Angelin;Gibso;11;3 D;4.41
+17;Sara;Johnso;18;8 C;3.38
+18;Sandr;Jame;20;10 D;3.8
+19;Aver;Blac;18;3 F;4.18
+20;Andre;Bryan;10;10 D;3.73
+21;Simo;Mill;15;11 C;4.73
+22;Shirle;Nelso;14;2 A;2.16
+23;Dougla;Coope;20;2 D;4.57
+24;Alex;Moor;14;11 C;4.25
+25;Alis;Meye;16;11 F;3.97
+26;Davi;Coo;13;4 F;2.54
+27;Sophi;Pere;17;2 B;4.24
+28;Arian;Ree;20;1 E;3.1
+29;Shirle;Rya;19;4 F;2.48
+30;Denni;Roger;20;11 E;3.4
+31;Ala;Jimene;14;7 D;3.5
+32;Katherin;Barne;13;9 A;4.85
+33;Samue;Gordo;12;10 D;2.18
+34;Sandr;Anderso;10;5 B;2.29
+35;Shirle;Powel;15;2 D;2.94
+36;Aver;Co;14;11 F;2.91
+37;Amand;Mill;19;8 C;3.91
+38;Dieg;Ramo;11;7 D;2.33
+39;Alfre;Morri;16;4 C;2.87
+40;Davi;Freema;18;11 C;4.95
+41;Shirle;Murph;11;4 F;3.58
+42;Danie;Alvare;20;6 B;3.22
+43;Ange;Kenned;11;8 C;2.43
+44;Ada;Gibso;20;8 C;4.54
+45;Samue;Jame;17;3 D;4.93
+46;Denni;Moren;16;4 B;3.6
+47;Stephani;Howar;16;7 D;4.34
+48;Davi;Snyde;14;5 A;4.3
+49;Angelin;Gonzale;9;7 D;3.47
+50;Ad;Henderso;11;2 B;4.43
+51;Set;Morga;13;5 B;4.07
+52;Aida;Myer;11;5 A;4.38
+53;Alexi;Patterso;13;6 B;4.44
+54;Aida;Sha;13;11 C;3.04
+55;Kathry;Ree;16;4 F;3.71
+56;Agath;Rodrigue;10;1 D;3.39
+57;Ad;Rodrigue;11;8 C;3.96
+58;Sar;Barne;17;3 D;3.34
+59;Aida;Holme;11;11 C;2.56
+60;Alliso;Pate;20;9 A;4.4
+61;Sara;Russel;19;7 D;3.22
+62;Alyss;Jone;13;4 E;3.39
+63;An;Torre;19;4 B;2.67
+64;Ala;War;11;1 E;2.29
+65;Ad;Lewi;19;1 D;4.61
+66;Ange;Rya;16;5 A;2.34
+67;Kimberl;Gree;14;11 E;4.23
+68;Sophi;Robinso;9;5 A;3.4
+69;Aver;Patterso;11;4 C;2.49
+70;Devi;Web;13;10 D;3.99
+71;Adria;Moor;10;4 F;2.18
+72;Sofi;Robinso;13;4 E;2.17
+73;Ala;Woo;17;11 E;4.03
+74;Samue;Wes;11;4 C;4.45
+75;Stanle;Butle;12;8 C;4.83
+76;Devi;Gree;9;1 D;2.16
+77;Ameli;Carte;19;3 F;3.49
+78;Amand;Butle;17;2 B;4.2
+79;Audre;Nichol;13;5 A;3.7
+80;Davi;Mitchel;17;2 A;3.12
+81;Alyss;War;11;4 E;4.67
+82;Kyli;Rui;18;2 A;3.81
+83;Ariann;Youn;18;6 B;2.75
+84;Autum;Watso;10;5 B;2.0
+85;Savanna;Castill;10;1 D;2.02
+86;Samue;Garci;15;8 C;3.71
+87;Ange;Dia;16;8 C;4.34
+88;Alex;Steven;12;4 C;2.77
+89;Alber;Stewar;10;1 E;3.87
+90;Katherin;Alexande;16;8 C;4.29
+91;Kayl;Hal;16;1 E;2.41
+92;Av;Woo;19;7 D;3.65
+93;Donal;Nichol;11;4 C;2.14
+94;Alejandr;Rya;14;11 E;4.71
+95;Agath;Blac;20;3 F;3.99
+96;Ada;Herrer;10;3 D;4.14
+97;Ala;Fishe;20;4 E;4.01
+98;Ada;Hick;9;5 B;2.87
+99;Anit;Ree;13;7 D;4.52
+100;Kayl;Dixo;19;11 C;3.0
+101;Savanna;Murra;19;3 D;3.86
+102;Sierr;Gibso;20;4 E;3.35
+103;Ala;Parke;11;4 B;3.59
+104;Alexi;Wes;17;2 D;3.69
+105;Sheil;Fo;16;11 E;2.77
+106;Stanle;Chave;9;6 B;2.1
+107;Stephani;Henr;10;4 E;4.95
+108;Ale;Nichol;16;9 A;4.98
+109;An;Morri;17;7 D;4.05
+110;Sybi;Brook;13;6 B;4.78
+111;Audre;Blac;11;4 C;4.45
+112;Andre;Marti;15;5 B;4.26
+113;Arian;Dixo;13;4 B;4.52
+114;Alejandr;Wes;15;2 B;2.22
+115;Alyss;Wagne;17;7 D;2.93
+116;Sebastia;Robinso;19;5 A;3.14
+117;Donal;Thompso;12;4 B;3.19
+118;Donal;Schmid;14;9 A;2.53
+119;Ala;Adam;19;3 F;4.03
+120;Anthon;Bel;9;4 C;2.34
+121;Sandr;Brook;12;7 D;3.16
+122;Kayl;Co;18;11 F;2.69
+123;Dougla;Ramo;18;1 D;4.53
+124;Ashto;Meye;10;9 A;2.02
+125;Denni;Reynold;18;8 C;3.68
+126;An;Gonzale;14;1 E;2.1
+127;Antoni;Freema;15;5 B;2.83
+128;Set;Alvare;12;1 D;2.72
+129;Sara;Carte;13;4 C;2.88
+130;Alexandr;Richardso;16;10 D;4.12
+131;Sybi;Brook;14;5 A;3.31
+132;Sierr;Torre;9;10 D;2.61
+133;Adria;Kenned;20;11 C;4.33
+134;Anit;Harri;18;8 C;2.73
+135;Av;Wrigh;14;5 A;4.8
+136;Anthon;Rui;20;7 D;4.85
+137;Denni;Wood;15;3 F;2.63
+138;Alexandr;Lewi;18;1 D;3.51
+139;Anit;Henderso;9;9 A;3.15
+140;Dieg;Robertso;16;11 C;4.19
+141;Abraha;Dixo;17;7 D;2.21
+142;Ashto;Washingto;20;4 F;3.25
+143;Anit;Jackso;11;5 A;2.08
+144;Stephani;Jorda;10;10 D;4.31
+145;Kayl;Bel;18;2 B;3.96
+146;Anthon;Edward;18;2 D;4.14
+147;Amand;Mitchel;10;3 D;4.47
+148;Sea;Lon;16;7 D;3.45
+149;Sea;Evan;10;4 C;3.97
+150;Autum;Porte;16;5 A;4.77
+151;Alexandr;Woo;17;7 D;4.8
+152;Agath;Henderso;13;9 A;2.83
+153;Domini;Edward;9;2 B;2.54
+154;Kimberl;Henr;13;3 D;2.64
+155;Dieg;Ree;13;4 E;2.44
+156;Aida;Pric;10;2 B;2.6
+157;Sara;Co;20;8 C;2.9
+158;Sar;Colema;19;6 B;3.33
+159;Anthon;Chave;13;8 C;3.76
+160;Set;Steven;16;4 E;4.13
+161;Stanle;Moor;18;4 E;4.54
+162;Ada;Ros;11;3 D;4.58
+163;Set;Robertso;9;4 F;3.47
+164;Adria;Taylo;14;10 D;4.2
+165;Kathry;Smit;12;4 C;2.34
+166;Samue;Alvare;16;7 D;2.21
+167;Alejandr;Gordo;11;4 E;4.97
+168;Agath;Gree;12;11 E;2.48
+169;Denni;Warre;10;2 A;3.23
+170;Alejandr;Phillip;18;11 F;2.26
+171;Ala;Hal;12;4 F;4.29
+172;Stephani;Lope;13;3 D;2.7
+173;Autum;Hick;17;5 A;2.01
+174;Savanna;Lewi;17;2 A;4.28
+175;Dougla;Co;13;5 A;4.87
+176;Kathry;Alexande;14;4 E;2.03
+177;Antoni;Baile;20;11 E;2.48
+178;Alyss;Butle;11;7 D;4.07
+179;Ashto;Thoma;14;2 A;3.38
+180;Sophi;Jimene;17;8 C;2.56
+181;Alexandr;Gree;17;11 F;3.65
+182;Ala;Holme;9;4 F;3.98
+183;Denni;Lewi;18;9 A;2.57
+184;Kimberl;Wallac;20;2 B;4.05
+185;Ariann;Reynold;19;4 C;2.16
+186;Ariann;Phillip;10;2 A;3.44
+187;Ariann;Owen;17;11 F;2.99
+188;Samue;Nelso;13;7 D;4.2
+189;Aaro;Patterso;9;3 D;4.43
+190;Dieg;Pate;11;5 A;3.98
+191;Samue;Morri;12;2 D;3.71
+192;Ad;Web;17;1 D;3.83
+193;Ale;Marti;9;7 D;3.09
+194;Sharo;Simmon;12;2 D;3.02
+195;Sar;Hunte;20;6 B;4.53
+196;Kimberl;Wallac;12;9 A;3.06
+197;Adria;Bake;9;4 E;2.1
+198;Ala;Jenkin;20;6 B;2.11
+199;Alexandr;Burn;14;9 A;2.47
+200;Denni;Castill;15;11 F;4.9
+201;Agath;Anderso;15;4 C;3.63
+202;Ad;Reynold;15;11 E;4.18
+203;Sheil;Burn;11;4 F;3.26
+204;Alexandr;Bel;16;4 C;3.75
+205;Sybi;Sulliva;11;3 F;2.88
+206;Savanna;Alvare;20;5 A;2.57
+207;Amand;Edward;17;2 D;4.28
+208;Ange;Gra;15;11 E;3.27
+209;Alliso;Ki;14;8 C;3.23
+210;Sar;Powel;19;5 A;4.26
+211;Aver;Tucke;10;11 E;2.96
+212;Domini;Hil;18;8 C;3.51
+213;Alyss;Thoma;14;7 D;4.45
+214;Sandr;Whit;15;5 A;3.68
+215;Antoni;Myer;15;5 A;4.33
+216;Alyss;Reye;11;7 D;4.41
+217;Stanle;Brook;17;4 C;4.58
+218;Alber;Pric;13;4 F;4.81
+219;Sierr;Blac;10;4 F;2.99
+220;Austi;Haye;9;11 F;3.31
+221;Av;Carte;11;11 C;2.07
+222;Denni;Anderso;12;4 B;4.88
+223;Alfre;Gonzale;9;8 C;4.8
+224;Susa;Taylo;20;4 E;4.96
+225;Danie;Parke;15;8 C;3.48
+226;Ashle;Ramire;10;4 B;3.44
+227;Set;William;20;4 F;4.97
+228;Alis;Robinso;11;6 B;3.03
+229;Sierr;Olso;13;7 D;4.18
+230;Sheil;Johnso;14;4 B;4.97
+231;Av;Harri;12;8 C;3.05
+232;Ashle;Sander;19;11 C;3.53
+233;Shirle;Nguye;17;8 C;3.58
+234;Alyss;Boy;17;4 B;4.38
+235;Sara;Mill;11;11 F;3.18
+236;Sheil;Hughe;20;4 B;2.31
+237;Sierr;Hamilto;16;7 D;4.25
+238;Alexandr;Gordo;16;4 E;2.67
+239;Kyli;Robertso;11;7 D;3.83
+240;Shirle;Rya;15;8 C;2.57
+241;Domini;Youn;16;8 C;3.64
+242;Ala;Gibso;14;1 E;4.4
+243;Sheil;Thompso;17;6 B;4.24
+244;Alejandr;Tucke;18;4 C;3.68
+245;Arian;Evan;9;2 A;2.85
+246;Sharo;Wilso;13;2 D;2.8
+247;Ange;Morga;18;9 A;2.24
+248;Kately;Ros;11;1 D;2.5
+249;Simo;Fo;11;2 A;2.99
+250;Ashto;Chave;16;8 C;4.69
+251;Adelin;Boy;14;5 A;4.38
+252;Donal;Ros;10;4 C;3.05
+253;Arian;Rya;10;9 A;4.04
+254;Stephani;Hunte;18;3 F;4.86
+255;Donal;Walke;17;7 D;4.14
+256;Autum;Ros;12;2 A;2.97
+257;Austi;Crawfor;19;8 C;3.8
+258;Anit;Colema;20;4 E;2.29
+259;Sierr;Mille;13;2 D;4.79
+260;Ale;Mitchel;9;3 D;4.24
+261;Alfre;Well;10;2 D;2.5
+262;Alis;Brook;14;11 F;4.95
+263;Sebastia;Davi;12;4 E;2.13
+264;Dieg;Peterso;15;11 F;3.52
+265;Aver;Gra;14;11 F;3.82
+266;Dieg;Hal;9;1 D;4.58
+267;Ashle;Morri;9;8 C;3.13
+268;Alejandr;Bake;14;9 A;2.68
+269;Ala;Henderso;14;8 C;4.05
+270;Katherin;Owen;14;4 F;4.5
+271;Antoni;Howar;19;2 A;4.44
+272;Devi;Johnso;16;7 D;3.87
+273;Av;Gibso;20;5 A;4.16
+274;Agath;Steven;10;2 D;4.7
+275;Alexi;Parke;10;3 F;3.15
+276;Agath;Hun;18;2 D;3.27
+277;Sandr;Scot;20;3 F;4.54
+278;An;Martine;10;4 F;2.59
+279;Ashle;Kell;16;8 C;3.95
+280;Kayle;McDonald (Mcdonald*;9;4 C;2.6
+281;Danie;Steven;10;11 E;4.29
+282;Alfre;Schmid;9;1 D;4.7
+283;Kimberl;Powel;15;4 E;3.86
+284;Samue;Nichol;14;4 B;3.44
+285;Sara;Robertso;16;5 A;4.98
+286;Arian;Jackso;15;4 E;2.08
+287;Kyli;Elli;20;4 C;3.12
+288;Ashto;Jone;9;4 E;4.24
+289;Anthon;Maso;18;5 B;3.58
+290;Ariann;River;19;4 F;3.34
+291;Dougla;Walke;20;4 C;4.73
+292;Alexi;Perr;10;6 B;2.89
+293;Antoni;Co;10;5 A;3.61
+294;Aver;Bryan;11;2 D;3.6
+295;Danie;Simmon;10;2 A;2.87
+296;Aida;Carte;15;7 D;4.22
+297;Ashto;Boy;19;4 E;3.49
+298;Sierr;Morale;15;3 F;4.68
+299;Kayl;Ferguso;18;4 C;3.88
+300;Alyss;Edward;19;11 E;4.18
+301;Sophi;Rya;10;7 D;2.47
+302;Donal;Sander;18;1 E;2.58
+303;Amand;Thoma;10;4 F;4.65
+304;Sophi;Mitchel;9;5 A;2.15
+305;Sophi;William;11;8 C;3.91
+306;Ambe;Jone;10;7 D;3.82
+307;Ashto;Rodrigue;10;11 C;4.87
+308;Ada;Nichol;19;1 E;2.3
+309;Arian;Rodrigue;15;3 D;4.98
+310;Simo;Marshal;9;3 D;4.85
+311;Aida;Murph;18;4 C;2.49
+312;Ada;Foste;15;4 C;3.29
+313;Sar;Bel;17;8 C;4.22
+314;Simo;Jone;15;2 D;2.99
+315;Domini;Reye;16;2 B;4.3
+316;Alber;Foste;10;3 D;2.02
+317;Samue;Ramire;11;8 C;4.56
+318;Kimberl;Ferguso;19;4 B;2.93
+319;Ad;Robinso;17;1 E;2.61
+320;Alexande;Warre;11;1 E;3.86
+321;Domini;Gibso;11;8 C;4.6
+322;Sierr;Fishe;16;7 D;4.76
+323;Kathry;Dia;11;11 F;4.27
+324;Ale;Ramo;9;2 A;3.71
+325;Alfre;Mille;20;8 C;3.01
+326;Ale;Barne;16;11 F;3.38
+327;Austi;Haye;15;9 A;4.11
+328;Alejandr;Mendoz;16;11 E;3.45
+329;Alyss;Bryan;13;2 A;4.65
+330;Kimberl;Woo;12;6 B;2.52
+331;Amand;Sander;10;6 B;4.9
+332;Domini;Carte;14;7 D;2.25
+333;Kathry;McDonald (Mcdonald*;11;6 B;3.16
+334;Andre;Vasque;20;1 E;2.25
+335;Ameli;Web;20;8 C;4.57
+336;Aida;William;13;5 B;4.54
+337;Donal;Crawfor;16;1 E;4.69
+338;Abraha;Morri;12;4 B;2.24
+339;Amand;Collin;15;1 E;4.25
+340;Alexande;Gonzale;15;11 F;2.33
+341;Aver;Davi;14;7 D;2.6
+342;Kyli;Jenkin;14;4 B;3.98
+343;Alexandr;Harri;12;11 E;2.71
+344;Dieg;Graha;15;10 D;4.42
+345;Amand;Romer;11;5 A;4.64
+346;Adelin;Gome;13;10 D;4.33
+347;Shirle;Castill;17;4 B;3.06
+348;Danie;Olso;19;4 E;2.71
+349;Anthon;Johnso;15;1 D;2.35
+350;Kayl;Reynold;17;9 A;3.07
+351;Aver;Jame;17;4 B;3.57
+352;Kately;Kin;12;10 D;4.62
+353;Donal;Porte;9;5 A;3.22
+354;Aida;Foste;16;6 B;3.64
+355;Alyss;Bennet;16;3 D;2.14
+356;Austi;Mendoz;20;7 D;3.88
+357;Donal;Hick;12;11 C;3.47
+358;Kyli;Holme;9;11 F;3.07
+359;Alex;Porte;20;7 D;2.37
+360;Ad;Warre;19;3 D;4.88
+361;Abraha;Mille;12;3 D;4.29
+362;Ange;Fishe;11;4 B;2.62
+363;Sophi;Stewar;15;7 D;3.46
+364;Antoni;Lewi;20;4 C;2.3
+365;Alex;Robertso;17;4 B;2.91
+366;Sheil;Warre;14;1 E;2.4
+367;Savanna;Col;11;4 B;3.1
+368;Audre;Vasque;13;3 F;2.91
+369;Sophi;Rui;20;4 E;2.02
+370;Sybi;Howar;10;11 E;3.5
+371;Ad;Robertso;10;5 A;4.39
+372;Alexande;Wood;10;4 E;2.63
+373;Autum;Kell;19;10 D;4.7
+374;Arian;Ros;12;4 B;4.97
+375;Alejandr;Ros;20;2 A;3.24
+376;Audre;Gonzale;19;5 A;2.84
+377;Kately;Sha;20;5 B;4.02
+378;Ad;Herrer;9;2 B;3.57
+379;Aaro;Gordo;15;4 E;2.3
+380;Ambe;Nelso;18;2 D;3.87
+381;Ashle;Reye;18;9 A;2.3
+382;Ange;Ros;13;4 E;2.31
+383;Andre;Orti;16;11 E;3.95
+384;Anit;Evan;9;8 C;3.85
+385;Sheil;Web;13;8 C;2.32
+386;Sara;Scot;18;8 C;3.87
+387;Stephani;Gree;16;9 A;4.54
+388;Ashle;Moor;9;5 B;2.49
+389;Kyli;Medin;12;6 B;2.9
+390;Adelin;Ston;14;1 E;3.8
+391;Sebastia;Washingto;20;4 C;3.69
+392;Kayle;For;17;5 B;2.89
+393;Ashto;Jone;20;2 B;2.96
+394;Kyli;Peterso;13;11 F;2.37
+395;Autum;Wallac;17;7 D;3.24
+396;Samue;Harriso;10;11 C;4.46
+397;Kately;Adam;16;2 B;2.8
+398;Alis;Stewar;15;2 D;3.91
+399;Ada;Brow;12;5 A;4.97
+400;Sara;Alle;13;3 F;3.82
+401;Susa;Jame;15;10 D;3.22
+402;Devi;Ros;20;9 A;4.36
+403;Domini;Nguye;13;5 A;2.11
+404;Sar;Moor;18;11 C;4.9
+405;Alis;Youn;17;11 E;4.05
+406;Sofi;Watso;14;4 C;3.74
+407;Savanna;Reye;18;4 C;4.22
+408;Sheil;Gome;18;11 C;2.26
+409;Sebastia;Hernande;16;7 D;3.67
+410;An;Jorda;12;11 E;2.94
+411;Arian;Carte;14;1 D;4.53
+412;Davi;Ree;17;11 F;2.89
+413;Audre;Gutierre;11;8 C;4.12
+414;Kayl;Ric;17;11 C;2.32
+415;Anit;For;16;5 A;4.42
+416;Sar;Lewi;11;3 F;3.17
+417;Ashto;Brow;12;3 D;2.96
+418;Danie;Jackso;19;1 E;3.35
+419;Samue;Peterso;18;2 B;3.27
+420;Alber;Boy;18;4 C;2.47
+421;Savanna;Phillip;9;4 E;2.86
+422;Sheil;Jenkin;13;4 E;4.15
+423;Denni;Thompso;9;10 D;4.03
+424;Kayle;Clar;14;5 A;2.46
+425;Aver;Lope;17;8 C;2.74
+426;Aver;Ric;14;4 F;2.74
+427;Stanle;Wilso;10;7 D;4.88
+428;Ariann;Myer;9;2 D;4.42
+429;Av;Robinso;11;2 B;4.22
+430;Aaro;Peterso;14;5 A;2.12
+431;Adelin;Bake;13;2 A;3.72
+432;Kayl;Hunte;13;3 F;3.61
+433;Sierr;Wood;10;2 A;2.66
+434;Ange;Clar;20;3 F;2.98
+435;Stephani;Stewar;18;11 F;3.92
+436;Ada;Wilso;11;8 C;4.93
+437;Adria;Sha;10;4 E;3.6
+438;Samue;Powel;18;5 A;3.15
+439;Susa;Maso;20;10 D;4.14
+440;Dieg;Turne;18;9 A;3.41
+441;Sea;Gree;12;1 E;2.67
+442;Katherin;Pere;13;1 D;4.72
+443;Sybi;Stewar;10;7 D;3.16
+444;Sofi;Baile;19;9 A;3.58
+445;Kayl;Sha;17;5 A;3.99
+446;Aaro;Hal;9;3 D;4.93
+447;Stephani;Peterso;9;5 A;3.6
+448;Danie;Ramo;13;2 B;2.37
+449;Ad;Butle;18;5 A;4.1
+450;Ale;Hal;19;4 B;3.72
+451;Arian;Jone;12;8 C;2.24
+452;Adria;Gonzale;13;7 D;3.94
+453;Sara;Edward;18;3 D;2.44
+454;Dougla;Co;20;3 F;4.73
+455;Alexande;Bel;13;11 C;4.95
+456;Alex;Boy;16;9 A;3.21
+457;Alfre;Sulliva;11;8 C;3.37
+458;Antoni;Snyde;19;3 F;2.63
+459;Ala;Haye;16;11 E;2.39
+460;Sophi;Lewi;10;7 D;3.68
+461;Alyss;Hun;10;4 E;4.08
+462;Ariann;Wood;18;4 B;3.33
+463;Austi;Alvare;9;4 F;3.53
+464;Andre;Lewi;15;3 D;2.32
+465;Sar;Ston;12;8 C;4.3
+466;Kathry;Jimene;17;4 B;2.58
+467;Audre;Wallac;14;1 D;4.56
+468;Agath;Chave;11;11 E;3.81
+469;Anthon;Kin;18;4 C;2.31
+470;Autum;Hernande;11;2 A;3.43
+471;Anthon;Elli;20;10 D;3.36
+472;Adelin;Alexande;17;2 B;4.97
+473;Alejandr;Peterso;18;11 C;4.38
+474;Ashto;Henr;20;2 D;2.98
+475;Anit;Robertso;20;10 D;2.72
+476;Alis;Lon;20;3 F;4.15
+477;Ad;Wagne;20;7 D;2.29
+478;Davi;Woo;19;5 A;4.62
+479;Audre;Hamilto;9;5 B;4.38
+480;Sofi;Castill;17;1 E;4.85
+481;Kimberl;Turne;12;3 F;3.14
+482;Sharo;Campbel;15;1 D;4.4
+483;Alliso;Turne;15;7 D;4.04
+484;Kathry;Fo;20;5 A;3.26
+485;Aida;Robinso;14;4 F;2.75
+486;Ada;Ric;16;1 E;3.02
+487;Sharo;Perr;20;8 C;2.51
+488;Ashle;Warre;15;7 D;2.01
+489;Dougla;Kenned;12;1 D;2.41
+490;Samue;Well;14;5 A;2.54
+491;Sara;Romer;12;2 A;3.7
+492;Sebastia;Gra;9;3 D;4.33
+493;Simo;Pere;12;4 F;3.07
+494;Kayle;Myer;17;4 F;4.79
+495;Angelin;Porte;17;1 E;2.08
+496;An;Gutierre;15;10 D;2.47
+497;Kately;Kenned;19;2 B;4.78
+498;Alexi;Vasque;13;4 E;4.37
+499;Sophi;Moor;9;5 B;2.6
