@@ -31,7 +31,7 @@ class DB_GUI(QtWidgets.QMainWindow):
 
         self.sql_command["create"]    = "CREATE TABLE {} ({});"
         self.sql_command["select"]    = "SELECT {} FROM {};"
-        self.sql_command["insert"]   = "INSERT INTO {} VALUES ({});"
+        self.sql_command["insert"]    = "INSERT INTO {} VALUES ({});"
         self.sql_command["delete"]    = "DELETE FROM {} WHERE {};"
         self.sql_command["drop"]      = "DROP TABLE IF EXISTS {};" 
         self.sql_command["sample"]    = "SELECT {} FROM {} WHERE {};"
