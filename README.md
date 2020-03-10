@@ -2,7 +2,7 @@
 
 Simple GUI for working with the database (Postgres Server)
 
-<img width=600px src="https://raw.githubusercontent.com/namig41/DataBaseGUI/image/GUI.png" />
+<img src="https://github.com/namig41/DataBaseGUI/blob/master/image/GUI.png" />
 
 # Usage
 -----
